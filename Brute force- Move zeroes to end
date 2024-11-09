@@ -1,0 +1,38 @@
+vector<int> moveZeros(int n, vector<int> a) {
+    // Write your code here.
+
+
+  //  step 1: put all non zeroes in temp array
+    vector<int> temp;
+    for(int i=0; i<n; i++)
+    {
+        if(a[i]!=0)
+        {
+            temp.push_back(a[i]);
+        }
+    }
+
+  // step 2: put all non zeroes from temp to front position in original array
+    int nz = temp.size();
+    for(int i=0; i<nz; i++)
+    {
+        a[i] = temp[i];
+    }
+
+    // step 3: assign zeroes to the leftover positions in the array
+    for(int i=nz; i<n; i++)
+    {
+        a[i]= 0;
+    }
+
+    return a;
+}
+
+/*This is the brute force solution:
+TC in step 1: O(N)
+TC in step 2: O(X)
+TC in step 3: O(N-X)
+Total TC: O(2N)
+SC = o(X) or O(N) in worst case
+
+nz stands for non zeroes*/
