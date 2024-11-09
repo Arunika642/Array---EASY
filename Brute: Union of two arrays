@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+
+vector<int> sortedArray(vector<int> a, vector<int> b) {
+  // Write your code here
+
+//step 1- include all uniques from a
+  set<int> st;
+  for (int i= 0; i< a.size(); i++){
+      st.insert(a[i]);
+  }
+
+//step 2- include all uniques from b
+
+  for(int i=0; i< b.size();i++)
+  {
+      st.insert(b[i]);
+  }
+//step 3- put all in temp
+  vector<int> temp;
+  for(auto it:st)
+  {
+      temp.push_back(it);
+  }
+
+  return temp;
+}
+
+
+/*
+TC in step 1: O(alogN)
+TC in step 2: O(blogN)
+TC in step 3: O(A+B)
+
+Total TC: O(alogN+blogN) + O(A+B)
+Total SC: O(A+B) + O(A+B) 1st to solve 2nd to return the answer*/
