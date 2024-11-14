@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int n=nums.size();
+        for(int i=0; i<n;i++)
+        {
+            int num1= nums[i];
+            int count=0;
+            for(int j=0;j<n;j++)
+            {
+                if(num1==nums[j])
+                {
+                    count++;
+                }
+            }
+            if(count==1)
+            return num1;
+        }
+        return -1;
+    }
+};
+
+//TC= O(N*N)
