@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int XOR1 =0;
+        int XOR2=0;
+        // for(int i=0;i<=nums.size();i++)
+        // {
+        //     XOR1^= i;
+        // }
+        /*I am removing this loop to decrease the TC from O(2N) to O(N)*/
+
+        for(int i=0;i<nums.size();i++)
+        {
+            XOR1^= (i);   //so it XOR's from 1 to N-1
+            XOR2^= nums[i];
+        }
+         XOR1^= nums.size(); //to include last size
+         return XOR1^XOR2;
+    }
+};
+//tc- O(n)
