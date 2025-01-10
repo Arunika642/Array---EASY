@@ -1,4 +1,3 @@
-
 vector<int> moveZeros(int n, vector<int> a) {
     // Write your code here.
     int j= -1;
