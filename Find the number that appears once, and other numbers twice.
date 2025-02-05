@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 int getSingleElement(vector<int> &arr){
 	// Write your code here.
 	int XOR = 0;
