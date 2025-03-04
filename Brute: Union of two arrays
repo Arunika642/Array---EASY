@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 vector<int> sortedArray(vector<int> a, vector<int> b) {
   // Write your code here
 
